@@ -1,0 +1,39 @@
+{
+  "namespace": "com.microservice",
+  "type": "record",
+  "name": "Stock",
+  "fields": [
+    {
+      "name": "symbol",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "date",
+      "type": "long"
+    },
+    {
+      "name": "open",
+      "type": "double"
+    },
+    {
+      "name": "high",
+      "type": "double"
+    },
+    {
+      "name": "low",
+      "type": "double"
+    },
+    {
+      "name": "close",
+      "type": "double"
+    },
+    {
+      "name": "volume",
+      "type": "double"
+    }
+  ]
+}

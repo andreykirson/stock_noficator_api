@@ -1,0 +1,47 @@
+server.port: 8082
+server.error.include-message: always
+
+
+spring.datasource.hikari.initializationFailTimeout: 60000
+
+
+logging:
+  level:
+    root: INFO
+    com.microservice: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/stock_notification
+    username: postgres
+    password: password
+    driverClassName: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: create
+    hibernate:
+      ddl-auto: update
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: stock-db
+  kafka:
+    streams:
+      replication-factor: 1
+  rsocket:
+    server:
+      mapping-path: /stocks
+      port: 7001
+      transport: websocket
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: 18fda8c0108d10160986
+            client-secret: 51584dc435bcb2909c03fe9c9c5fb4dfbe9ee8cc
