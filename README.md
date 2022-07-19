@@ -9,3 +9,9 @@
  - SpringBoot
  - MongoDB
  - PostgreSQL
+
+
+### UI representation
+![](../../Stock Notificator Menu.png)
+
+
